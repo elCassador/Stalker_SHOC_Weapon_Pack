@@ -52,7 +52,8 @@
         {
           "Type": "Insert_Magazine",
           "MagazineTypes": [
-            "Ak_Rifle_Magazine"
+            "Ak_Rifle_Magazine",
+            "Ak_Rifle_Magazine_45"
           ],
           "LoadedGunName": "Ak_Rifle",
           "LoadSound": "Insert_Mag",

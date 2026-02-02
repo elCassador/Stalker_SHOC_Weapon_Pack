@@ -1,0 +1,107 @@
+{
+  "Icon": "Icons/ItemsGenerated/Ak_Rifle_Magazine.png",
+  "Model": "Items/Ak_Rifle_Magazine/Ak_Rifle_Mag.blockymodel",
+  "Texture": "Items/Ak_Rifle_Magazine/Ak_Rifle_Texture.png",
+  "IconProperties": {
+    "Scale": 2.5,
+    "Rotation": [
+      332,
+      232,
+      0
+    ],
+    "Translation": [
+      5,
+      -1
+    ]
+  },
+  "Recipe": {
+    "TimeSeconds": 3.5,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 15
+      },
+      {
+        "ItemId": "Ingredient_Bar_Copper",
+        "Quantity": 25
+      },
+      {
+        "ResourceTypeId": "Wood_Trunk",
+        "Quantity": 10
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Stalker_Gun_Bench",
+        "RequiredTierLevel": 1,
+        "Categories": [
+          "Stalker_Magazines"
+        ]
+      }
+    ]
+  },
+  "MaxStack": 1,
+  "Scale": 0.5,
+  "PlayerAnimationsId": "Torch",
+  "Categories": [
+    "StalkerGunsCategory.Magazines"
+  ],
+  "Quality": "Technical",
+  "TranslationProperties": {
+    "Name": "RPK Magazine 45 rnd"
+  },
+  "InteractionConfig": {
+    "Priorities": {
+      "Secondary": {
+        "MainHand": 1,
+        "OffHand": -1
+      }
+    }
+  },
+  "Utility": {
+    "Usable": true
+  },
+  "Interactions": {
+    "Primary": {
+      "Cooldown": {
+        "Cooldown": 0.7
+      },
+      "Interactions": [
+        {
+          "Type": "Overload_Check",
+          "MaxAmmo": 45,
+          "Next": {
+            "Type": "Charging",
+            "MaxAmmo": 45,
+            "HorizontalSpeedMultiplier": 0.4,
+            "Next": {
+              "0.7": {
+                "Type": "Load_Magazine",
+                "MaxAmmo": 45,
+                "AmmoPerLoad": 5,
+                "AmmoItemType": "Ammo_Ak545",
+                "LoadAmmoSound": "SFX_Load_Ammo",
+                "Effects": {
+                  "ItemAnimationId": "Interact"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "Unload_Magazine",
+          "AmmoItemType": "Ammo_Ak545",
+          "LoadAmmoSound": "SFX_Load_Ammo",
+          "Effects": {
+            "ItemAnimationId": "Interact"
+          }
+        }
+      ]
+    }
+  },
+  "UsePlayerAnimations": true
+}
