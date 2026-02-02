@@ -1,0 +1,31 @@
+{
+  "Icon": "Icons/ItemCategories/StalkerCategory.png",
+  "Order": 2,
+  "Children": [
+    {
+      "Id": "Ammo",
+      "Name": "server.ui.itemcategory.tools",
+      "Icon": "Icons/ItemCategories/AmmoCategory.png"
+    },
+    {
+      "Id": "Guns",
+      "Name": "server.ui.itemcategory.weapons",
+      "Icon": "Icons/ItemCategories/GunsCategory.png"
+    },
+    {
+      "Id": "Magazines",
+      "Name": "server.ui.itemcategory.weapons",
+      "Icon": "Icons/ItemCategories/MagazinesCategory.png"
+    },
+    {
+      "Id": "Armors",
+      "Name": "server.ui.itemcategory.armors",
+      "Icon": "Icons/ItemCategories/ArmorCategory.png"
+    },
+    {
+      "Id": "Ingredients",
+      "Name": "server.ui.itemcategory.ingredients",
+      "Icon": "Icons/ItemCategories/CraftCategory.png"
+    }
+  ]
+}

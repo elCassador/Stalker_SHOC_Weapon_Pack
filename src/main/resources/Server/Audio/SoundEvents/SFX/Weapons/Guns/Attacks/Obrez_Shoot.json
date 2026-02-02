@@ -1,0 +1,19 @@
+{
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Weapons/Shoot/Obrez/Toz_Shoot.ogg"
+      ],
+      "RandomSettings": {
+        "MinPitch": 0,
+        "MaxPitch": 0,
+        "MinVolume": 0,
+        "MaxVolume": 0
+      },
+      "Volume": 0
+    }
+  ],
+  "PreventSoundInterruption": true,
+  "Volume": -2.0,
+  "Parent": "SFX_Attn_Moderate"
+}

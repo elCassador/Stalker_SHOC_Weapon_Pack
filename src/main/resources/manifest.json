@@ -1,0 +1,18 @@
+{
+  "Group": "dev.cazador",
+  "Name": "StalkerWeaponPlugin",
+  "Version": "1.0.0",
+  "Description": "Implement stalker weapon into Hytale",
+  "Authors": [
+    {
+      "Name": "cazador"
+    }
+  ],
+  "Website": "https://your-plugin-website.com",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true,
+  "Main": "dev.cazador.StalkerWeaponPlugin"
+}

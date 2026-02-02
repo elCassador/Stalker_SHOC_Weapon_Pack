@@ -1,0 +1,93 @@
+{
+  "Icon": "Icons/ItemsGenerated/Ak_Rifle.png",
+  "Model": "Items/Ak_Rifle/Ak_Rifle.blockymodel",
+  "Texture": "Items/Ak_Rifle/Ak_Rifle_Texture.png",
+  "IconProperties": {
+    "Scale": 0.15,
+    "Rotation": [
+      315,
+      90,
+      0
+    ],
+    "Translation": [
+      -2,
+      -67
+    ]
+  },
+  "MaxStack": 1,
+  "Scale": 0.5,
+  "Parent": "Weapon_Handgun",
+  "PlayerAnimationsId": "Rifle",
+  "Categories": [
+    "StalkerGunsCategory.Guns"
+  ],
+  "Quality": "Technical",
+  "TranslationProperties": {
+    "Name": "Ak-74"
+  },
+  "Utility": {
+    "Compatible": true
+  },
+  "Interactions": {
+    "Primary": {
+      "Cooldown": {
+        "Cooldown": 0.05
+      },
+      "RequireNewClick": false,
+      "Interactions": [
+        {
+          "Type": "Shoot",
+          "Failed": "Gun_Shoot_Fail",
+          "Effects": {
+            "ItemAnimationId": "Shoot",
+            "FirstPersonParticles": [
+              {
+                "SystemId": "RifleShooting",
+                "PositionOffset": {
+                  "X": -0.2,
+                  "Z": 3,
+                  "Y": 0.2
+                },
+                "RotationOffset": {
+                  "Yaw": 0,
+                  "Pitch": 90
+                }
+              }
+            ],
+            "Particles": [
+              {
+                "SystemId": "RifleShooting",
+                "RotationOffset": {
+                  "Pitch": 90
+                },
+                "PositionOffset": {
+                  "X": -0.2,
+                  "Z": 2.4,
+                  "Y": 0.2
+                }
+              }
+            ],
+            "CameraEffect": "Handgun_Shoot"
+          },
+          "Damage": 10,
+          "Pellets": 1,
+          "Spread": 0,
+          "ShootSound": "Ak_Rifle_Shoot"
+        }
+      ]
+    },
+    "Ability3": {
+      "Interactions": [
+        {
+          "Type": "Extract_Magazine",
+          "UnloadedGunName": "Ak_Rifle_Unloaded",
+          "UnloadSound": "Extract_Mag",
+          "Effects": {
+            "ItemAnimationId": "Interact"
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 3000
+}

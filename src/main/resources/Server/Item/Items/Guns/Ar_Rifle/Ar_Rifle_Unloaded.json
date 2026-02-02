@@ -1,0 +1,67 @@
+{
+  "Icon": "Icons/ItemsGenerated/Ar_Rifle_Unloaded.png",
+  "Model": "Items/Ar_Rifle_Unloaded/Ar_Rifle_Unloaded.blockymodel",
+  "Texture": "Items/Ar_Rifle_Unloaded/Ar_Rifle_Texture.png",
+  "IconProperties": {
+    "Scale": 0.37,
+    "Translation": [
+      -2,
+      -7
+    ],
+    "Rotation": [
+      315,
+      90,
+      0
+    ]
+  },
+  "Recipe": {
+    "TimeSeconds": 3.5,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 50
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Stalker_Gun_Bench",
+        "RequiredTierLevel": 1,
+        "Categories": [
+          "Stalker_Guns"
+        ]
+      }
+    ]
+  },
+  "MaxStack": 1,
+  "Scale": 0.3,
+  "Parent": "Weapon_Handgun",
+  "PlayerAnimationsId": "Rifle",
+  "Categories": [
+    "StalkerGunsCategory.Guns"
+  ],
+  "Quality": "Technical",
+  "TranslationProperties": {
+    "Name": "Lr-300 (unloaded)"
+  },
+  "Utility": {
+    "Compatible": true
+  },
+  "Interactions": {
+    "Ability3": {
+      "Interactions": [
+        {
+          "Type": "Insert_Magazine",
+          "MagazineTypes": [
+            "Ar_Rifle_Magazine"
+          ],
+          "LoadedGunName": "Ar_Rifle",
+          "LoadSound": "Insert_Mag",
+          "Effects": {
+            "ItemAnimationId": "Interact"
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 3000
+}

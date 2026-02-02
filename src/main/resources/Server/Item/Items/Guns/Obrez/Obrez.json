@@ -1,0 +1,124 @@
+{
+  "Icon": "Icons/ItemsGenerated/Obrez.png",
+  "Model": "Items/Obrez/Obrez.blockymodel",
+  "Texture": "Items/Obrez/Obrez_Texture.png",
+  "IconProperties": {
+    "Scale": 0.15,
+    "Rotation": [
+      315,
+      90,
+      0
+    ],
+    "Translation": [
+      -2,
+      -67
+    ]
+  },
+  "Recipe": {
+    "TimeSeconds": 3.5,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 25
+      },
+      {
+        "ResourceTypeId": "Wood_Trunk",
+        "Quantity": 20
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Stalker_Gun_Bench",
+        "RequiredTierLevel": 1,
+        "Categories": [
+          "Stalker_Guns"
+        ]
+      }
+    ]
+  },
+  "MaxStack": 1,
+  "Scale": 0.04,
+  "Parent": "Weapon_Handgun",
+  "PlayerAnimationsId": "Rifle",
+  "Categories": [
+    "StalkerGunsCategory.Guns"
+  ],
+  "Quality": "Technical",
+  "TranslationProperties": {
+    "Name": "Obrez"
+  },
+  "Utility": {
+    "Compatible": true
+  },
+  "Interactions": {
+    "Primary": {
+      "Cooldown": {
+        "Cooldown": 0.4
+      },
+      "RequireNewClick": false,
+      "Interactions": [
+        {
+          "Type": "Shoot",
+          "Failed": "Gun_Shoot_Fail",
+          "Effects": {
+            "ItemAnimationId": "Shoot",
+            "FirstPersonParticles": [
+              {
+                "SystemId": "RifleShooting",
+                "PositionOffset": {
+                  "X": -0.2,
+                  "Z": 3,
+                  "Y": 0.2
+                },
+                "RotationOffset": {
+                  "Yaw": 0,
+                  "Pitch": 90
+                }
+              }
+            ],
+            "Particles": [
+              {
+                "SystemId": "RifleShooting",
+                "RotationOffset": {
+                  "Pitch": 90
+                },
+                "PositionOffset": {
+                  "X": -0.2,
+                  "Z": 2.4,
+                  "Y": 0.2
+                }
+              }
+            ],
+            "CameraEffect": "Handgun_Shoot"
+          },
+          "Damage": 5,
+          "Pellets": 7,
+          "Spread": 5,
+          "ShootSound": "Obrez_Shoot"
+        }
+      ]
+    },
+    "Ability3": {
+      "Cooldown": {
+        "Cooldown": 2.6
+      },
+      "Interactions": [
+        {
+          "Type": "Overload_Check",
+          "MaxAmmo": 2,
+          "Next": {
+            "Type": "Load_Magazine",
+            "MaxAmmo": 2,
+            "AmmoPerLoad": 2,
+            "AmmoItemType": "Ammo_S12",
+            "LoadAmmoSound": "Toz_Reload",
+            "Effects": {
+              "ItemAnimationId": "Interact"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 3000
+}

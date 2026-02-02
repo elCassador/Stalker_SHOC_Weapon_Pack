@@ -1,0 +1,107 @@
+{
+  "Icon": "Icons/ItemsGenerated/Ar_Rifle_Magazine.png",
+  "Model": "Items/Ar_Rifle_Magazine/Ar_Rifle_Mag.blockymodel",
+  "Texture": "Items/Ar_Rifle_Magazine/Ar_Rifle_Texture.png",
+  "IconProperties": {
+    "Scale": 2.5,
+    "Rotation": [
+      332,
+      232,
+      0
+    ],
+    "Translation": [
+      5,
+      -1
+    ]
+  },
+  "Recipe": {
+    "TimeSeconds": 3.5,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 15
+      },
+      {
+        "ItemId": "Ingredient_Bar_Copper",
+        "Quantity": 25
+      },
+      {
+        "ResourceTypeId": "Wood_Trunk",
+        "Quantity": 10
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Stalker_Gun_Bench",
+        "RequiredTierLevel": 1,
+        "Categories": [
+          "Stalker_Magazines"
+        ]
+      }
+    ]
+  },
+  "MaxStack": 1,
+  "Scale": 0.25,
+  "PlayerAnimationsId": "Torch",
+  "Categories": [
+    "StalkerGunsCategory.Magazines"
+  ],
+  "Quality": "Technical",
+  "TranslationProperties": {
+    "Name": "Lr-300 Magazine 30 rnd"
+  },
+  "InteractionConfig": {
+    "Priorities": {
+      "Secondary": {
+        "MainHand": 1,
+        "OffHand": -1
+      }
+    }
+  },
+  "Utility": {
+    "Usable": true
+  },
+  "Interactions": {
+    "Primary": {
+      "Cooldown": {
+        "Cooldown": 0.7
+      },
+      "Interactions": [
+        {
+          "Type": "Overload_Check",
+          "MaxAmmo": 30,
+          "Next": {
+            "Type": "Charging",
+            "MaxAmmo": 30,
+            "HorizontalSpeedMultiplier": 0.4,
+            "Next": {
+              "0.7": {
+                "Type": "Load_Magazine",
+                "MaxAmmo": 30,
+                "AmmoPerLoad": 5,
+                "AmmoItemType": "Ammo_Ar556",
+                "LoadAmmoSound": "SFX_Load_Ammo",
+                "Effects": {
+                  "ItemAnimationId": "Interact"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "Unload_Magazine",
+          "AmmoItemType": "Ammo_Ar556",
+          "LoadAmmoSound": "SFX_Load_Ammo",
+          "Effects": {
+            "ItemAnimationId": "Interact"
+          }
+        }
+      ]
+    }
+  },
+  "UsePlayerAnimations": true
+}
