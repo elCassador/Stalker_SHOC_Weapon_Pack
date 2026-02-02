@@ -65,3 +65,9 @@ For the mod to work correctly, **MultipleHUD v1.04** **must** be installed and p
 </p>
 
 * Added craft stations for ammo and guns.
+* Add creative menu tab.
+
+<p align="center">
+    <img src="images/Screenshot_3.png" alt="tab" height="466" width="687">
+</p>
+
