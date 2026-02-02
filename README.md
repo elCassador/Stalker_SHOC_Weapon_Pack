@@ -16,6 +16,14 @@ For the mod to work correctly, **MultipleHUD v1.04** **must** be installed and p
 
 ---
 
+## Install
+
+---
+
+`.jar` inside the `mod` folder
+
+---
+
 ## Controls
 
 * Load ammo into magazine: **Hold LMB**
